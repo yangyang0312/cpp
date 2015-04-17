@@ -1,0 +1,905 @@
+题目1 : 传话游戏
+时间限制:2000ms
+单点时限:1000ms
+内存限制:256MB
+描述
+Alice和Bob还有其他几位好朋友在一起玩传话游戏。这个游戏是这样进行的：首先，所有游戏者按顺序站成一排，Alice站第一位，Bob站最后一位。然后，Alice想一句话悄悄告诉第二位游戏者，第二位游戏者又悄悄地告诉第三位，第三位又告诉第四位……以此类推，直到倒数第二位告诉Bob。两位游戏者在传话中，不能让其他人听到，也不能使用肢体动作来解释。最后，Bob把他所听到的话告诉大家，Alice也把她原本所想的话告诉大家。
+由于传话过程中可能出现一些偏差，游戏者越多，Bob最后听到的话就与Alice所想的越不同。Bob听到的话往往会变成一些很搞笑的东西，所以大家玩得乐此不疲。经过几轮游戏后，Alice注意到在两人传话中，有些词汇往往会错误地变成其他特定的词汇。Alice已经收集到了这样的一个词汇转化的列表，她想知道她的话传到Bob时会变成什么样子，请你写个程序来帮助她。
+
+
+输入
+输入包括多组数据。第一行是整数 T，表示有多少组测试数据。每组数据第一行包括两个整数 N 和 M，分别表示游戏者的数量和单词转化列表长度。随后有 M 行，每行包含两个用空格隔开的单词 a 和 b，表示单词 a 在传话中一定会变成 b。输入数据保证没有重复的 a。最后一行包含若干个用单个空格隔开的单词，表示Alice所想的句子，句子总长不超过100个字符。所有单词都只包含小写字母，并且长度不超过20，同一个单词的不同时态被认为是不同的单词。你可以假定不在列表中的单词永远不会变化。
+
+1 ≤ T ≤ 100
+小数据：2 ≤ N ≤ 10, 0 ≤ M ≤ 10 
+大数据：2 ≤ N ≤ 100, 0 ≤ M ≤ 100
+
+输出
+对于每组测试数据，单独输出一行“Case #c: s”。其中，c 为测试数据编号，s 为Bob所听到的句子。s 的格式与输入数据中Alice所想的句子格式相同。
+
+样例输入
+2
+4 3
+ship sheep
+sinking thinking
+thinking sinking
+the ship is sinking
+10 5
+tidy tiny
+tiger liar
+tired tire
+tire bear
+liar bear
+a tidy tiger is tired
+样例输出
+Case #1: the sheep is thinking
+Case #2: a tiny bear is bear
+
+题目2 : 长方形
+时间限制:2000ms
+单点时限:1000ms
+内存限制:256MB
+描述
+在 N 条水平线与 M 条竖直线构成的网格中，放 K 枚石子，每个石子都只能放在网格的交叉点上。问在最优的摆放方式下，最多能找到多少四边平行于坐标轴的长方形，它的四个角上都恰好放着一枚石子。
+
+
+
+输入
+输入文件包含多组测试数据。
+第一行，给出一个整数T，为数据组数。接下来依次给出每组测试数据。
+每组数据为三个用空格隔开的整数 N，M，K。
+
+1 ≤ T ≤ 100
+0 ≤ K ≤ N * M
+小数据：0 < N, M ≤ 30
+大数据：0 < N, M ≤ 30000
+
+输出
+对于每组测试数据，输出一行"Case #X: Y"，其中X表示测试数据编号，Y表示最多能找到的符合条件的长方形数量。所有数据按读入顺序从1开始编号。
+
+样例输入
+3
+3 3 8
+4 5 13
+7 14 86
+样例输出
+Case #1: 5
+Case #2: 18
+Case #3: 1398
+
+
+题目3 : 树上的三角形
+时间限制:4000ms
+单点时限:2000ms
+内存限制:256MB
+描述
+有一棵树，树上有只毛毛虫。它在这棵树上生活了很久，对它的构造了如指掌。所以它在树上从来都是走最短路，不会绕路。它还还特别喜欢三角形，所以当它在树上爬来爬去的时候总会在想，如果把刚才爬过的那几根树枝/树干锯下来，能不能从中选三根出来拼成一个三角形呢？
+
+输入
+输入数据的第一行包含一个整数 T，表示数据组数。
+接下来有 T 组数据，每组数据中：
+第一行包含一个整数 N，表示树上节点的个数（从 1 到 N 标号）。
+接下来的 N-1 行包含三个整数 a, b, len，表示有一根长度为 len 的树枝/树干在节点 a 和节点 b 之间。
+接下来一行包含一个整数 M，表示询问数。
+接下来M行每行两个整数 S, T，表示毛毛虫从 S 爬行到了 T，询问这段路程中的树枝/树干是否能拼成三角形。
+
+1 ≤ T ≤ 5
+小数据：1 ≤ N ≤ 100, 1 ≤ M ≤ 100, 1 ≤ len ≤ 10000
+大数据：1 ≤ N ≤ 100000, 1 ≤ M ≤ 100000, 1 ≤ len ≤ 1000000000
+
+输出
+对于每组数据，先输出一行"Case #X:",其中X为数据组数编号，从 1 开始。
+接下来对于每个询问输出一行，包含"Yes"或“No”，表示是否可以拼成三角形。
+
+样例输入
+2
+5
+1 2 5
+1 3 20
+2 4 30
+4 5 15
+2
+3 4
+3 5
+5
+1 4 32
+2 3 100
+3 5 45
+4 5 60
+2
+1 4
+1 3
+样例输出
+Case #1:
+No
+Yes
+Case #2:
+No
+Yes
+
+
+题目1 : Arithmetic Expression
+时间限制:2000ms
+单点时限:200ms
+内存限制:256MB
+描述
+Given N arithmetic expressions, can you tell whose result is closest to 9?
+
+输入
+Line 1: N (1 <= N <= 50000).
+Line 2..N+1: Each line contains an expression in the format of "a op b" where a, b are integers (-10000 <= a, b <= 10000) and op is one of addition (+), subtraction (-), multiplication (*) and division (/). There is no "divided by zero" expression.
+
+
+输出
+The index of expression whose result is closest to 9. If there are more than one such expressions, output the smallest index.
+
+
+样例输入
+4
+901 / 100
+3 * 3
+2 + 6
+8 - -1
+样例输出
+2
+
+题目2 : Longest Repeated Sequence
+时间限制:10000ms
+单点时限:1000ms
+内存限制:256MB
+描述
+You are given a sequence of integers, A = a1, a2, ... an. A consecutive subsequence of A (say ai, ai+1 ... aj) is called a "repeated sequence" if it appears more than once in A (there exists some positive k that ai+k = ai, ai+k+1 = ai+1, ... aj+k = aj) and its appearances are not intersected (i + k > j).
+
+Can you find the longest repeated sequence in A?
+
+输入
+Line 1: n (1 <= n <= 300), the length of A.
+Line 2: the sequence, a1 a2 ... an (0 <= ai <= 100).
+
+输出
+The length of the longest repeated sequence.
+
+样例输入
+5
+2 3 2 3 2
+样例输出
+2
+
+
+题目1 : String reorder
+时间限制:10000ms
+单点时限:1000ms
+内存限制:256MB
+Description
+For this question, your program is required to process an input string containing only ASCII characters between ‘0’ and ‘9’, or between ‘a’ and ‘z’ (including ‘0’, ‘9’, ‘a’, ‘z’).
+
+Your program should reorder and split all input string characters into multiple segments, and output all segments as one concatenated string. The following requirements should also be met,
+1. Characters in each segment should be in strictly increasing order. For ordering, ‘9’ is larger than ‘0’, ‘a’ is larger than ‘9’, and ‘z’ is larger than ‘a’ (basically following ASCII character order).
+2. Characters in the second segment must be the same as or a subset of the first segment; and every following segment must be the same as or a subset of its previous segment.
+
+Your program should output string “<invalid input string>” when the input contains any invalid characters (i.e., outside the '0'-'9' and 'a'-'z' range).
+
+
+
+Input
+
+Input consists of multiple cases, one case per line. Each case is one string consisting of ASCII characters.
+
+Output
+
+For each case, print exactly one line with the reordered string based on the criteria above.
+
+
+样例输入
+aabbccdd
+007799aabbccddeeff113355zz
+1234.89898
+abcdefabcdefabcdefaaaaaaaaaaaaaabbbbbbbddddddee
+样例输出
+abcdabcd
+013579abcdefz013579abcdefz
+<invalid input string>
+abcdefabcdefabcdefabdeabdeabdabdabdabdabaaaaaaa
+
+题目2 : K-th string
+时间限制:10000ms
+单点时限:1000ms
+内存限制:256MB
+Description
+Consider a string set that each of them consists of {0, 1} only. All strings in the set have the same number of 0s and 1s. Write a program to find and output the K-th string according to the dictionary order. If such a string doesn’t exist, or the input is not valid, please output “Impossible”. For example, if we have two ‘0’s and two ‘1’s, we will have a set with 6 different strings, {0011, 0101, 0110, 1001, 1010, 1100}, and the 4th string is 1001.
+
+Input
+The first line of the input file contains a single integer t (1 ≤ t ≤ 10000), the number of test cases, followed by the input data for each test case.
+Each test case is 3 integers separated by blank space: N, M(2 <= N + M <= 33 and N , M >= 0), K(1 <= K <= 1000000000). N stands for the number of ‘0’s, M stands for the number of ‘1’s, and K stands for the K-th of string in the set that needs to be printed as output.
+
+Output
+For each case, print exactly one line. If the string exists, please print it, otherwise print “Impossible”.
+
+
+样例输入
+3
+2 2 2
+2 2 7
+4 7 47
+样例输出
+0101
+Impossible
+01010111011
+
+题目3 : Reduce inversion count
+时间限制:10000ms
+单点时限:1000ms
+内存限制:256MB
+Description
+Find a pair in an integer array that swapping them would maximally decrease the inversion count of the array. If such a pair exists, return the new inversion count; otherwise returns the original inversion count.
+
+Definition of Inversion: Let (A[0], A[1] ... A[n], n <= 50) be a sequence of n numbers. If i < j and A[i] > A[j], then the pair (i, j) is called inversion of A.
+
+Example:
+Count(Inversion({3, 1, 2})) = Count({3, 1}, {3, 2}) = 2
+InversionCountOfSwap({3, 1, 2})=>
+{
+ InversionCount({1, 3, 2}) = 1 <-- swapping 1 with 3, decreases inversion count by 1
+ InversionCount({2, 1, 3}) = 1 <-- swapping 2 with 3, decreases inversion count by 1
+ InversionCount({3, 2, 1}) = 3 <-- swapping 1 with 2 , increases inversion count by 1
+}
+
+
+
+Input
+Input consists of multiple cases, one case per line.Each case consists of a sequence of integers separated by comma. 
+
+Output
+For each case, print exactly one line with the new inversion count or the original inversion count if it cannot be reduced.
+
+
+样例输入
+3,1,2
+1,2,3,4,5
+样例输出
+1
+0
+
+题目4 : Most Frequent Logs
+时间限制:10000ms
+单点时限:3000ms
+内存限制:256MB
+Description
+In a running system, there are many logs produced within a short period of time, we'd like to know the count of the most frequent logs.
+
+Logs are produced by a few non-empty format strings, the number of logs is N(1<=N<=20000), the maximum length of each log is 256.
+
+Here we consider a log same with another when their edit distance (see note) is <= 5.
+
+Also we have a) logs are all the same with each other produced by a certain format string b) format strings have edit distance  5 of each other.
+
+Your program will be dealing with lots of logs, so please try to keep the time cost close to O(nl), where n is the number of logs, and l is the average log length.
+
+Note edit distance is the minimum number of operations (insertdeletereplace a character) required to transform one string into the other, please refer to
+
+
+
+http://en.wikipedia.org/wiki/Edit_distance for more details.
+
+
+
+
+
+Input
+Multiple lines of non-empty strings.
+
+Output
+
+The count of the most frequent logs.
+
+
+样例输入
+Logging started for id:1
+Module ABC has completed its job
+Module XYZ has completed its job
+Logging started for id:10
+Module ? has completed its job
+样例输出
+3
+
+题目1 : 同构
+时间限制:2000ms
+单点时限:1000ms
+内存限制:256MB
+描述
+给定2个树A和B，保证A的节点个数>=B的节点个数。
+
+现在你需要对树A的边进行二染色。
+
+一个好的染色方案，指不存在一个树A中的连通块，同时满足以下2个条件
+
+1. 其中只有同色的边
+
+2. 和B同构。两个树同构是指，存在一个一一映射（既是单射又是满射），将树B的各节点映射到不同的树A的节点，使得原来在树B中相邻的点，在映射后，仍相邻。
+
+问是否存在一种好的染色方案。
+
+
+
+输入
+第一行一个整数T (1<=T<=10)，表示数据组数。
+
+接下来是T组输入数据，测试数据之间没有空行。
+
+
+
+每组数据格式如下：
+
+第一行一个整数N ，表示树A的节点总数。
+
+接下来N-1行，每行2个数a, b (1 <= a, b <= N)表示树A的节点a和b之间有一条边。
+
+接下来一行，一个整数M(1 <= M <= N)，表示树B的节点总数。
+
+接下来M-1行，每行2个数a, b (1 <= a, b <= M)表示树B的节点a和b之间有一条边。
+
+
+
+输出
+对每组数据，先输出“Case x: ”，x表示是第几组数据，然后接“YES”/“NO”，表示是否存在所求的染色方案。
+
+
+
+数据范围
+小数据：1 <= N <= 20
+
+大数据：1 <= N <= 1000000
+
+
+
+样例解释
+无论如何染色，只要从A中挑一条边就行了。
+
+
+
+样例输入
+1
+3
+1 2
+2 3
+2
+1 2
+样例输出
+Case 1: NO
+
+题目2 : 大神与三位小伙伴
+时间限制:2000ms
+单点时限:1000ms
+内存限制:256MB
+描述
+L国是一个有着优美景色且物产丰富的国家，很多人都喜欢来这里旅游并且喜欢带走一些纪念品，大神同学也不例外。距离开L国的时间越来越近了，大神同学正在烦恼给她可爱的小伙伴们带什么纪念品好，现在摆在大神同学面前的有三类纪念品A, B, C可以选择，每类纪念品各有N种。其中种类为A_i, B_i, C_i的纪念品价值均为i, 且分别有N+1-i个剩余。现在大神同学希望在三类纪念品中各挑选一件然后赠送给她的三名可爱的小伙伴，但是她又不希望恰好挑出来两件价值相同的纪念品，因为这样拿到相同价值纪念品的两位小伙伴就会认为大神同学偏袒另一位小伙伴而不理睬她超过一星期。现在，大神同学希望你买到的三件纪念品能让三位小伙伴都开心并且不和她闹别扭，她想知道一共有多少种不同挑选的方法？
+
+因为方案数可能非常大，大神同学希望知道挑选纪念品的方案数模10^9+7之后的答案。
+
+
+
+输入
+第一行包括一个数T，表示数据的组数。
+
+接下来包含T组数据，每组数据一行，包括一个整数N。
+
+
+
+输出
+对于每组数据，输出一行“Case x: ”，其中x表示每组数据的编号(从1开始)，后接一个数，表示模10^9+7后的选择纪念品的方案数。
+
+
+
+数据范围
+小数据：
+
+1<=T<=10
+
+1<=N<=100
+
+大数据：
+
+1<=T<=1000
+
+1<=N<=10^18
+
+
+
+样例解释
+对于第二组数据，合法的方案有以下几种，(X,Y,Z)表示选择了A类纪念品中价值为X的，B类纪念品中价值为Y的，C类纪念品中价值为Z的。
+
+(1,1,1): 3*3*3=27种
+
+(1,2,3): 3*2*1=6种
+
+(1,3,2): 3*1*2=6种
+
+(2,1,3): 2*3*1=6种
+
+(2,2,2): 2*2*2=8种
+
+(2,3,1): 2*1*3=6种
+
+(3,1,2): 1*3*2=6种
+
+(3,2,1): 1*2*3=6种
+
+(3,3,3): 1*1*1=1种
+
+一共27+6+6+6+8+6+6+6+1=72种选择纪念品的方案
+
+注意，如(1,1,2), (2,3,3), (3,1,3)都因为恰好选择了两件价值相同的纪念品，所以并不是一种符合要求的纪念品选择方法。
+
+
+
+
+
+
+
+样例输入
+2
+1
+3
+样例输出
+Case 1: 1
+Case 2: 72
+
+题目3 : 格格取数
+时间限制:2000ms
+单点时限:1000ms
+内存限制:256MB
+描述
+给你一个m x n (1 <= m, n <= 100)的矩阵A (0<=aij<=10000)，要求在矩阵中选择一些数，要求每一行，每一列都至少选到了一个数，使得选出的数的和尽量的小。
+
+
+
+输入
+多组测试数据。首先是数据组数T
+
+对于每组测试数据，第1行是两个正整数m, n，分别表示矩阵的行数和列数。
+
+接下来的m行，每行n个整数，之间用一个空格分隔，表示矩阵A的元素。
+
+
+
+输出
+每组数据输出一行，表示选出的数的和的最小值。
+
+
+
+数据范围
+小数据：1 <= m, n <= 5
+
+大数据：1 <= m, n <= 100
+
+
+
+
+
+样例输入
+2
+3 3
+1 2 3
+3 1 2
+2 3 1
+5 5
+1 2 3 4 5
+5 1 2 3 4
+4 5 1 2 3
+3 4 5 1 2
+2 3 4 5 1
+样例输出
+Case 1: 3
+Case 2: 5
+
+
+编程之美初赛第一场返回比赛列表
+题目1 : 焦距
+时间限制:2000ms
+单点时限:1000ms
+内存限制:256MB
+描述
+一般来说，我们采用针孔相机模型，也就是认为它用到的是小孔成像原理。
+
+在相机坐标系下，一般来说，我们用到的单位长度，不是“米”这样的国际单位，而是相邻像素的长度。而焦距在相机坐标系中的大小，是在图像处理领域的一个非常重要的物理量。
+
+假设我们已经根据相机参数，得到镜头的物理焦距大小(focal length)，和相机胶片的宽度(CCD width)，以及照片的横向分辨率(image width)，则具体计算公式为：
+
+Focal length in pixels = (image width in pixels) * (focal length on earth) / (CCD width on earth)
+
+比如说对于Canon PowerShot S100, 带入公式得
+
+Focal length in pixels = 1600 pixels * 5.4mm / 5.27mm = 1639.49 pixels
+
+现在，请您写一段通用的程序，来求解焦距在相机坐标系中的大小。
+
+
+
+输入
+多组测试数据。首先是一个正整数T，表示测试数据的组数。
+
+每组测试数据占一行，分别为
+
+镜头的物理焦距大小(focal length on earth)
+
+相机胶片的宽度(CCD width on earth)
+
+照片的横向分辨率大小(image width in pixels)，单位为px。
+
+之间用一个空格分隔。
+
+
+
+输出
+每组数据输出一行，格式为“Case X: Ypx”。 X为测试数据的编号，从1开始；Y为焦距在相机坐标系中的大小(focallength in pixels)，保留小数点后2位有效数字，四舍五入取整。
+
+
+
+数据范围
+对于小数据：focal length on earth和CCD width on earth单位都是毫米(mm)
+
+对于大数据：长度单位还可能为米(m), 分米(dm), 厘米(cm), 毫米(mm), 微米(um)，纳米(nm)
+
+
+
+
+
+样例输入
+2
+5.4mm 5.27mm 1600px
+5400um 0.00527m 1600px
+样例输出
+Case 1: 1639.47px
+Case 2: 1639.47px
+
+
+
+题目2 : 树
+时间限制:4000ms
+单点时限:2000ms
+内存限制:256MB
+描述
+有一个N个节点的树，其中点1是根。初始点权值都是0。
+
+一个节点的深度定义为其父节点的深度+1,。特别的，根节点的深度定义为1。
+
+现在需要支持一系列以下操作：给节点u的子树中，深度在l和r之间的节点的权值（这里的深度依然从整个树的根节点开始计算），都加上一个数delta。
+
+问完成所有操作后，各节点的权值是多少。
+
+
+
+为了减少巨大输出带来的开销，假设完成所有操作后，各节点的权值是answer[1..N]，请你按照如下方式计算出一个Hash值（请选择合适的数据类型，注意避免溢出的情况）。最终只需要输出这个Hash值即可。
+
+
+
+MOD =1000000007; // 10^9 + 7
+
+MAGIC= 12347;
+
+Hash =0;
+
+For i= 1 to N do
+
+   Hash = (Hash * MAGIC + answer[i]) mod MOD;
+
+EndFor
+
+
+
+输入
+第一行一个整数T (1 ≤ T ≤ 5)，表示数据组数。
+
+接下来是T组输入数据，测试数据之间没有空行。
+
+每组数据格式如下：
+
+第一行一个整数N (1 ≤ N ≤ 105)，表示树的节点总数。
+
+接下来N - 1行，每行1个数，a (1 ≤ a ≤ N)，依次表示2..N节点的父亲节点的编号。
+
+接下来一个整数Q(1 ≤ Q ≤ 105)，表示操作总数。
+
+接下来Q行，每行4个整数，u, l, r, delta (1 ≤ u ≤ N, 1 ≤ l ≤ r ≤ N, -109 ≤ delta ≤ 109)，代表一次操作。
+
+
+
+输出
+对每组数据，先输出一行“Case x: ”，x表示是第几组数据，然后接这组数据答案的Hash值。
+
+
+
+数据范围
+
+
+小数据：1 ≤ N, Q ≤ 1000
+
+大数据：1 ≤ N, Q ≤ 105
+
+
+
+样例解释
+点1的子树中有1,2,3三个节点。其中深度在2-3之间的是点2和点3。
+
+点2的子树中有2,3两个节点。其中没有深度为1的节点。
+
+所以，执行完所有操作之后，只有2,3两点的权值增加了1。即答案是0 1 1。再计算对应的Hash值即可。
+
+
+
+
+
+
+
+样例输入
+1
+3
+1
+2
+2
+1 2 3 1
+2 1 1 1
+样例输出
+Case 1: 12348
+
+
+
+题目3 : 活动中心
+时间限制:12000ms
+单点时限:6000ms
+内存限制:256MB
+描述
+A市是一个高度规划的城市，但是科技高端发达的地方，居民们也不能忘记运动和锻炼，因此城市规划局在设计A市的时候也要考虑为居民们建造一个活动中心，方便居住在A市的居民们能随时开展运动，锻炼强健的身心。
+
+城市规划局希望活动中心的位置满足以下条件：
+
+1. 到所有居住地的总距离最小。
+
+2. 为了方便活动中心的资源补给和其他器材的维护，活动中心必须建设在A市的主干道上。
+
+
+
+为了简化问题，我们将A市摆在二维平面上，城市的主干道看作直角坐标系平的X轴，城市中所有的居住地都可以看成二维平面上的一个点。
+
+现在，A市的城市规划局希望知道活动中心建在哪儿最好。
+
+
+
+输入
+第一行包括一个数T，表示数据的组数。
+
+接下来包含T组数据，每组数据的第一行包括一个整数N，表示A市共有N处居住地
+
+接下来N行表示每处居住地的坐标。
+
+
+
+输出
+对于每组数据，输出一行“Case X: Y”，其中X表示每组数据的编号(从1开始)，Y表示活动中心的最优建造位置。我们建议你的输出保留Y到小数点后6位或以上，任何与标准答案的绝对误差或者相对误差在10-6以内的结果都将被视为正确。
+
+
+
+数据范围
+小数据：1 ≤ T ≤ 1000, 1 ≤ N ≤ 10
+
+大数据：1 ≤ T ≤ 10, 1 ≤ N ≤ 105
+
+对于所有数据，坐标值都是整数且绝对值都不超过106
+
+
+
+
+
+样例解释
+样例1：活动中心的最优建造位置为(1.678787, 0)
+
+
+
+
+
+样例输入
+1
+3
+1 1
+2 2
+3 3
+样例输出
+Case 1: 1.678787
+
+
+
+题目1 : 神奇的数列
+时间限制:2000ms
+单点时限:1000ms
+内存限制:256MB
+描述
+大神同学是一个热爱数字的孩子，她无时无刻不在思考生活与数学的联系。有一天，她发现其实公历的设计是有讲究的。
+
+每4年就会多闰一天，每一百年又会有一年不是闰年，而第四百年又是闰年。这样，这四百年的周期里每一年平均有365又400分之97天。
+
+大神同学将上面的规律简记为100-4+1=97。
+
+大神同学想知道是不是每一个自然数都能按照上面的形式表示出来，具体来说就是，大神同学希望将一个自然数N写成A1 - A2 + A3 - A4 + …的形式，其中
+
+A1是A2的倍数，A2是A3的倍数，依此类推。另外，大神同学不想让这个问题变得太无聊，她还增加了一些附加条件：
+
+1. 其中Ai ≠ Aj (i ≠ j)，即相邻的两个数前一个至少是后一个的两倍或以上。
+
+2. 数列的长度至少为3，不能超过100（大神同学觉得数列太长一定可以找到答案）。
+
+3. 构造出来的数列中的每一个数不能太大，因此大神同学希望数列中的每一个数都是小于263的正整数。
+
+大神同学思考了一会儿，发现这个问题似乎没有那么简单，现在她求助于你，希望你能帮她解决这个不太简单的问题。
+
+
+
+输入
+第一行包括一个数T，表示数据的组数。
+
+接下来包含T组数据，每组数据一行，包括一个整数N。
+
+
+
+输出
+对于每组数据，输出一行“Case X: ”，其中X表示每组数据的编号(从1开始)，后接一个字符串“no solution”表示无解，或者输出一列数{Ai}，相邻两个数之间用空格隔开。
+
+
+
+数据范围
+小数据：
+
+1 ≤ T ≤ 10
+
+1 ≤ N ≤ 100
+
+
+
+大数据：
+
+1 ≤ T ≤ 1000
+
+1 ≤ N ≤ 1018
+
+
+
+
+样例输入
+2
+1
+97
+样例输出
+Case 1: no solution
+Case 2: 100 4 1
+
+
+题目2 : 字符串压缩
+时间限制:8000ms
+单点时限:4000ms
+内存限制:256MB
+描述
+你的硬盘上有一个神秘的文件占用了大量空间，你决定将其压缩以节省空间。不幸的是，你还没有安装任何压缩软件，所以你决定自己编写一个压缩程序。你发现这是一个文本文件，包括很多行。每行是一个长度恰好为L的字符串，而且字符串可能有重复。行的顺序并不重要，换言之，打乱顺序之后仍然可以认为文件内容和原来相同。
+
+例如，这个文件的内容可以是这样的：
+
+bar
+
+car
+
+bat
+
+cat
+
+cat
+
+
+
+经过一段时间观察，你发现同一列的字符往往是相同的，于是你设计了一个简单的压缩框架。首先以某种策略调整行的顺序，然后把所有字符串按照先列后行的顺序变换成单个字符串，例如上面的例子，不调整顺序则直接变换成：
+
+bcbccaaaaarrttt
+
+然后使用游程编码(RLE)的到压缩变换后的字符串：
+
+1b1c1b2c5a2r3t
+
+当然也可以先调换顺序：
+
+car
+
+cat
+
+cat
+
+bat
+
+bar
+
+这样的压缩字符串为：
+
+3c2b5a1r3t1r
+
+比不调整顺序的稍短一些。
+
+现在，你已经得到了两个不同的压缩字符串，你想知道他们解压后的文件是否相同，请写一个程序解决这个问题。
+
+
+
+输入
+第一行是一个整数T (T <= 30)，表示测试数据组数。
+
+每组测试数据占三行。第一行为整数L，表示原始文件中每一行字符串的长度。第二行和第三行分别是两个压缩字符串，格式如c1 n1 c2 n2 … cMnM,表示字符ci连续出现了ni次。具体格式见样例。输入字符串只含a到z的小写字母，确保压缩字符串合法有效，且不为空。
+
+
+
+输出
+对每组测试数据，首先输出”Case x: ”，其中x表示测试数据编号。如果两个压缩字符串对应于相同的文件内容，则输出”Yes”，否则输出”No”。
+
+
+
+数据范围
+小数据：1<=L<=10, 1<=ni<=100,压缩字符串长度不超过10^4
+
+大数据：1<=L<=1000, 1<=ni<=10^9,压缩字符串长度不超过10^6
+
+
+
+
+样例输入
+2
+3
+1b1c1b2c5a2r3t
+3c2b5a1r3t1r
+2
+20a20b10a20b10a
+20a20b20a20b
+样例输出
+Case 1: Yes
+Case 2: No
+EmacsNormalVim
+
+
+题目3 : 集合
+时间限制:12000ms
+单点时限:6000ms
+内存限制:256MB
+描述
+统计满足下列条件的集合对(A, B)的数量：
+
+A,B都是{1, 2, …, N}的子集；
+
+A,B没有公共的元素；
+
+f(A)<= f(B)。f(S)定义为S中所有元素的按位异或和。例如， f({}) = 0, f({1, 3}) = 2。
+
+因为答案可能很大，你只需要求出它除以M的余数。
+
+
+
+输入
+第一行一个整数T (1 ≤ T ≤ 10)，表示数据组数。
+
+接下来是T组输入数据，测试数据之间没有空行。
+
+每组数据格式如下：
+
+仅一行，2个整数N和M (1 ≤ M ≤ 108)。
+
+
+
+输出
+对每组数据，先输出“Case x: ”，然后接一个整数，表示所求的结果。
+
+
+
+数据范围
+小数据：1 ≤ N ≤ 20
+
+大数据：1 ≤ N < 212
+
+
+
+
+样例输入
+1
+3 100000000
+样例输出
+Case 1: 18

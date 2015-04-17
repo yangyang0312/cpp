@@ -1,0 +1,24 @@
+﻿生成启动时间为 2014/3/22 21:57:40。
+     1>项目“C:\Users\DELL\Desktop\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\新建文件夹 (2)\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\calc_class_calc.cpp ..\calc_class_cmd.cpp ..\calc_class_judge.cpp ..\main.cpp
+         calc_class_calc.cpp
+     1>..\calc_class_calc.cpp(27): warning C4018: “<”: 有符号/无符号不匹配
+     1>..\calc_class_calc.cpp(679): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+         calc_class_cmd.cpp
+         calc_class_judge.cpp
+     1>..\calc_class_judge.cpp(624): warning C4018: “<”: 有符号/无符号不匹配
+         main.cpp
+       Link:
+         E:\新建文件夹 (2)\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\DELL\Desktop\ConsoleApplication1\Release\ConsoleApplication1.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\DELL\Desktop\ConsoleApplication1\Release\ConsoleApplication1.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\DELL\Desktop\ConsoleApplication1\Release\ConsoleApplication1.lib" /MACHINE:X86 /SAFESEH Release\calc_class_calc.obj
+         Release\calc_class_cmd.obj
+         Release\calc_class_judge.obj
+         Release\main.obj
+         正在生成代码
+         已完成代码的生成
+         ConsoleApplication1.vcxproj -> C:\Users\DELL\Desktop\ConsoleApplication1\Release\ConsoleApplication1.exe
+     1>已完成生成项目“C:\Users\DELL\Desktop\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:11.65

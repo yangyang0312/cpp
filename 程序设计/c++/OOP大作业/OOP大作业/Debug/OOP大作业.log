@@ -1,0 +1,55 @@
+﻿生成启动时间为 2014/11/18 22:39:41。
+     1>项目“C:\Users\DELL\Desktop\OOP大作业\OOP大作业\OOP大作业.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         E:\新建文件夹 (2)\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt file.cpp
+         file.cpp
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(21): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(22): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(27): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(28): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(29): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(38): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(39): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(43): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(44): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(106): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(119): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(136): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(149): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(333): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(334): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(335): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(336): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\string.h(110) : 参见“strcpy”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(338): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(353): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(368): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\stdio.h(218) : 参见“fopen”的声明
+     1>c:\users\dell\desktop\oop大作业\oop大作业\file.cpp(385): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\新建文件夹 (2)\vc\include\stdio.h(218) : 参见“fopen”的声明
+       Link:
+         E:\新建文件夹 (2)\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\DELL\Desktop\OOP大作业\Debug\OOP大作业.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\DELL\Desktop\OOP大作业\Debug\OOP大作业.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\DELL\Desktop\OOP大作业\Debug\OOP大作业.lib" /MACHINE:X86 Debug\file.obj
+         OOP大作业.vcxproj -> C:\Users\DELL\Desktop\OOP大作业\Debug\OOP大作业.exe
+     1>已完成生成项目“C:\Users\DELL\Desktop\OOP大作业\OOP大作业\OOP大作业.vcxproj”(Rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.90

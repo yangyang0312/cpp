@@ -1,0 +1,65 @@
+C语言之数字转化为字符串的库函数
+发表于：昨天 13:18 | 分类：个人日记 阅读：(1) 评论：(0)
+
+我们常用到的有以下几种：
+　　1、Itoa
+　　功 能：把一长整形转换为字符串。
+　　用 法：char *Itoa（long value, char *string, int radix）;
+　　详细解释：Itoa是英文long integer to array（将long int长整型数转化为一个字符串，并将值保存在数组string中）的缩写。
+　　参数：
+　　value: 待转化的长整型数。
+　　radix: 是基数的意思，即先将value转化为radix进制的数，范围介于2-36，比如10表示10进制，16表示16进制。
+　　* string: 保存转换后得到的字符串。
+　　返回值：
+　　char * : 指向生成的字符串， 同*string。
+　　备注：该函数的头文件是“stdlib.h”。
+
+
+　　2、Ultoa
+　　功 能：把一无符号长整形转换为字符串。
+　　用 法：char *Ultoa（unsigned long value, char *string, int radix）;
+　　详细解释：Uitoa是英文unsigned long integer to array（将unsigned long int无符号长整型数转化为一个字符串，并将值保存在数组string中）的缩写。
+　　参数：
+　　value: 待转化的无符号长整型数。
+　　radix: 是基数的意思，即先将value转化为radix进制的数，范围介于2-36，比如10表示10进制，16表示16进制。
+　　* string: 保存转换后得到的字符串。
+　　返回值：
+　　char * : 指向生成的字符串， 同*string。
+　　备注：该函数的头文件是“stdlib.h”。
+
+3、Gcvt
+　　功 能：把浮点型数转换为字符串，取四舍五入。
+　　用 法：char *Gcvt（double value, int ndigit, char *buf）;
+　　详细解释：Gcvt（）用来将参数number转换成ASCII码字符串，参数ndigits表示显示的位数。Gcvt（）与Ecvt（）和 Fcvt（）不同的地方在于，Gcvt（）所转换后的字符串包含小数点或正负符号。若转换成功，转换后的字符串会放在参数buf指针所指的空间。
+　　参 数：
+　　value：待转化的浮点数。
+　　ndigit：存储的有效数字位数。
+　　*buf：结果的存储位置。
+　　返回值：
+　　char * ：指向生成的字符串， 同*buf。
+　　备注：该函数的头文件是“stdlib.h”。 　　4、Ecvt
+　　功 能：将双精度浮点型数转换为字符串，转换结果中不包括十进制小数点。
+　　用 法：char *Ecvt（double value, int ndigit, int *decpt, int *sign）;
+　　详细解释：Ecvt函数把一个双精度浮点数转换成一个字符串。value参数是要转换的浮点数。这个函数存储最多ndigit个数字值作为一个字符串，并添加一个空数字符（'\0'），如果value中的数字个数超过ndigit,低位数字被舍入。如果少于ndigit个数字，该字符串用0填充。
+　　只有数字才存储在该字符串中，小数点位置和value符号在调用之后从decpt和sign获取。decpt参数指出给出小数点位置的整数值， 它是从该字符串的开头位置计算的。0或负数指出小数点在第一个数字的左边。sign参数指出一个指出转换的数的符号的整数。如果该整数为0,这个数为正数，否则为负数。
+　　参 数：
+　　value：待转换的双精度浮点数。
+　　ndigit：存储的有效数字位数。
+　　*decpt：存储的小数点位置。
+　　*sign：转换的数的符号。
+　　返回值：
+　　char*：指向生成的字符串。
+　　备注：该函数的头文件是“stdlib.h”。
+
+5、Fcvt
+　　功 能：指定位数为转换精度，其余同Ecvt。
+　　用 法：char *Fcvt（double value, int ndigit, int *decpt, int *sign）;
+　　详细解释：Fcvt函数把一个双精度浮点数转换成一个字符串。value参数是要转换的浮点数。参与转换的实际值保留的小数位数由ndigit决定。 　　只有数字才存储在该字符串中，小数点位置和value符号在调用之后从decpt和sign获取。decpt参数指出给出小数点位置的整数值， 它是从该字符串的开头位置计算的。0或负数指出小数点在第一个数字的左边。sign参数指出一个指出转换的数的符号的整数。如果该整数为0,这个数为正数，否则为负数。
+　　参 数：
+　　value:待转换的双精度浮点数。
+　　ndigit：转换的字符串中包含小数点后几位。
+　　*decpt:返回小数点在串中的位置。
+　　*sign:符号标志。
+　　返回值：
+　　char*：指向生成的字符串。
+　　备注：该函数的头文件是“stdlib.h”
