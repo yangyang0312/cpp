@@ -1,40 +1,4 @@
-#include<iostream>
-#include <random>
-using namespace std;
 
-inline int left(int i)//左子树
-{
-	return i << 1;
-}
-inline int right(int i)//右子树
-{
-	return (i << 1) + 1;
-}
-inline int parent(int i)//父节点
-{
-	return i >> 1;
-}
-
-void maintenance(int *a,int i,int size)//维护堆的性质
-{
-	int l = left(i)-1,r=right(i)-1;
-	--i;
-	int large = i;
-	if (l < size && a[l] > a[i])
-		large = l;
-	if (r < size && a[r] > a[large])
-		large = r;
-	if (large!=i)
-	{
-		a[i] ^= a[large];
-		a[large] ^= a[i];
-		a[i] ^= a[large];//异或交换元素无需额外空间
-		if (large<=(size>>1))
-			maintenance(a, large+1, size);//这儿是large+1
-	}
-}
-void build(int *a, int size)//建堆，建堆得同时维护堆
-{
 	for (int i = (size >> 1); i >= 1; --i)
 		maintenance(a, i, size);
 }
