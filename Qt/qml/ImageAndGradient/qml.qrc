@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>关于.png</file>
+        <file>关机.png</file>
+        <file>gif.gif</file>
+    </qresource>
+</RCC>
